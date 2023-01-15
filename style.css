@@ -1,0 +1,155 @@
+:root{
+
+    --preto-basico: #000000;
+    --laranja-basico: #FF4500;
+    --branco-basico: #ffffff;
+    --cinza-basico:  #808080;;
+    --azul-fundo: #191970;
+    --fonte-titulos-e-itens: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: var(--azul-fundo);
+    color: var(--branco-basico);
+    font-family: var(--fonte-titulos-e-itens);
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+/* Cabeçario e menu de contato pagina*/
+
+.cabecario{
+    position: fixed;
+    background-color: var(--preto-basico);
+    width: 100%;
+    height: 50px;
+    display: inline-flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo-nome{
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.logo-nome span{
+    color: var(--cinza-basico);
+}
+
+.menu-cabecario{
+    font-size: 20px;
+}
+
+.itens-cabecario li{
+    display: inline;
+    margin: 0 10px;
+}
+
+.itens-cabecario li a{
+    color: var(--branco-basico);
+    font-weight: bold;
+    transition: 300ms;
+}
+
+.itens-cabecario li a:hover{
+    color: var(--laranja-basico);
+}
+
+/* Aprensentação */
+
+.apresentacao-inicial{
+    display: flex;
+    min-width: 1060px;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 15%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.apresentacao-inicial .estatico{
+    font-size: 40px;
+    font-weight: 400;
+}
+
+.apresentacao-inicial .dinamico{
+    overflow: hidden;
+}
+
+.dinamico li{
+    color: var(--laranja-basico);
+    font-weight: 500;
+}
+
+.dinamico li span::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    border-left: 2px solid var(--laranja-basico);
+    animation: typing 1.6s steps(20) infinite;
+    background: var(--azul-fundo);
+}
+
+.apresenta-nome span{
+    color: var(--cinza-basico);
+    background-color: var(--preto-basico);
+    text-decoration:underline;
+    text-underline-offset: 10px;
+    transition: 300ms;
+}
+
+.dinamico li span{
+    position: relative;
+}
+
+@keyframes typing{
+    100%{
+        left: 100%;
+        margin: 0 -35px 0 35px;
+    }
+}
+.apresenta-nome span:hover{
+    background-color: var(--cinza-basico);
+    color: var(--branco-basico);
+}
+
+.imagem-apresentacao{
+    margin-top: 50px;
+    background-color: var(--preto-basico);
+}
+
+/* icones de contato */
+.icones-contato{
+    margin: 40px 0 0 0;
+}
+
+.lista-icones li{
+    display: inline; 
+    margin: 0 40px;
+}
+
+.lista-icones img{
+    width: 40px;
+    height: 40px;
+    opacity: .2;
+    transition: 300ms;
+}
+
+.lista-icones img:hover{
+    opacity: 1;
+    transform: scale(1.5, 1.5);
+}
+
